@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch HeapSort",
+            "request": "launch",
+            "mainClass": "HeapSort",
+            "projectName": "Data_Structure_And_Algorothms_8142d66a"
+        },
+        {
+            "type": "java",
+            "name": "Launch Heapify",
+            "request": "launch",
+            "mainClass": "Heapify",
+            "projectName": "Data_Structure_And_Algorothms_8142d66a"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"

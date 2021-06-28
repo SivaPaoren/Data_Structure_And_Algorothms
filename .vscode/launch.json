@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Merge_Sort",
+            "request": "launch",
+            "mainClass": "Merge_Sort",
+            "projectName": "Data_Structure_And_Algorothms_8142d66a"
+        },
+        {
+            "type": "java",
+            "name": "Launch QuickSort",
+            "request": "launch",
+            "mainClass": "QuickSort",
+            "projectName": "Data_Structure_And_Algorothms_8142d66a"
+        },
+        {
+            "type": "java",
             "name": "Launch HeapSort",
             "request": "launch",
             "mainClass": "HeapSort",

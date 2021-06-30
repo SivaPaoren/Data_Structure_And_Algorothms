@@ -1,26 +1,33 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
-import javax.xml.transform.Result;
 
 public class TopDownMemoizationApproach {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
+        Fib fib = new Fib();
+        //generate the required array
+        fib.initF();
+        fib.dynamicFabinacci(1);
 
-        if(n <= 1)System.out.println("Fib("+n+") = "+n);
-        else{
-            System.out.println("Fib("+n+") = "+Fibonacci(n));
+        for(int i:fib.result){
+             System.out.print(i+" ");
         }
-        scanner.close();
     }
 }
 
-class TopDown{
-    List<Integer> numbers;
+class Fib{
+    static int[] result = new int[50];
 
-    public TopDown(){
-       numbers = new ArrayList<>();
+    public static void initF(){
+        for(int i=0;i<50;i++){
+            result[i] = -1;
+        }
+    }
+
+    public int dynamicFabinacci(int n){
+         if(result[n] == -1){
+             if(n <= 1)result[n] = n;
+             else{
+                result[n] = dynamicFabinacci(n-1)+dynamicFabinacci(n-2);
+            }
+         }
+         return result[n];
     }
 }
